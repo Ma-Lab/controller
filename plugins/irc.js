@@ -1,7 +1,7 @@
 var irc = require("irc");
 
 var config = {
-        channels: ["#ma-lab"],
+        channels: ["#ma-lab", "#mediacollege"],
         server: "irc.freenode.net",
         botName: "ma-lab"
 };
@@ -47,7 +47,15 @@ bot.say("#ma-lab", ".flash [color] | Flashes the leds (in a special color)");
 }
 
 });
+bot.addListener("message#mediacollege", function(from, message) {
 
+if (message.indexOf(".woof") >= 0) {
+bot.say("#mediacollege", "Woof!");
+}
+if (message.indexOf(".meow") >= 0) {
+bot.say("#mediacollege", "Meow!");
+}
+});
 bot.addListener('error', function(message) {
     console.log('error: ', message);
 });

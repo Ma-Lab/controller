@@ -28,8 +28,9 @@ node_modules
 .lock-wscript
 
 # Start script with secrets
-
 start.sh
 
 # Temp
 *~
+tmp/
+
